@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         items = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, R.layout.activity_main, items);
+        adapter = new ArrayAdapter<>(this, R.layout.list_item_textview, items);
 
         ListView listView = findViewById(R.id.myListView);
         listView.setAdapter(adapter);

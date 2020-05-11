@@ -107,10 +107,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 String message = "Berget " + items.get(i).getName() + " finns i " + items.get(i).getLocation() + " och är " + items.get(i).getHeight() + " meter högt.";
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
-
             }
         });
-
 
         new JsonTask().execute("https://wwwlab.iit.his.se/brom/kurser/mobilprog/dbservice/admin/getdataasjson.php?type=brom");
 

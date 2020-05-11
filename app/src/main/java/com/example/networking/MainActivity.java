@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -89,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
+                String message = "Berget " + items.get(i).getName() + " finns i " + items.get(i).getLocation() + " och är " + items.get(i).getHeight() + " meter högt.";
+                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
 
             }
         });
